@@ -1,182 +1,358 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nossa História ❤️</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: #fff5f7;
-      color: #4a3b3b;
-      line-height: 1.6;
+      background: #100b0e;
+      color: #f5e6eb;
+      line-height: 1.7;
     }
 
-    /* Cabeçalho */
     header {
       text-align: center;
-      padding: 60px 20px 40px;
-      background: linear-gradient(135deg, #ffd6e0, #ffe8ef);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #c94f6d;
-      letter-spacing: 1px;
-    }
-    header p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-      color: #8a5a66;
+      padding: 75px 20px 60px;
+      background: linear-gradient(135deg, #210d17, #461426, #180b12);
+      border-bottom: 1px solid #572033;
     }
 
-    /* Seções */
+    header h1 {
+      font-size: 2.8rem;
+      color: #e88ba6;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 12px;
+      color: #d2a6b5;
+      font-size: 1.1rem;
+    }
+
     section {
       max-width: 1000px;
-      margin: 40px auto;
+      margin: 65px auto;
       padding: 0 20px;
     }
+
     section h2 {
       text-align: center;
-      color: #c94f6d;
-      margin-bottom: 25px;
-      font-size: 1.8rem;
+      color: #e88ba6;
+      margin-bottom: 30px;
+      font-size: 1.9rem;
     }
 
-    /* Galeria de fotos */
+    .destaque {
+      max-width: 850px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .destaque .espaco {
+      height: 420px;
+      background: #24151d;
+      border: 1px dashed #8b3d58;
+      border-radius: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #d18ba1;
+      padding: 20px;
+    }
+
+    /* Texto romântico */
+
+    .mensagem {
+      max-width: 850px;
+      margin: 70px auto;
+      padding: 45px 35px;
+      background: linear-gradient(145deg, #29131e, #1b1017);
+      border: 1px solid #713047;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .mensagem h2 {
+      color: #ed91aa;
+      margin-bottom: 25px;
+    }
+
+    .mensagem p {
+      color: #e4cbd4;
+      font-size: 1.08rem;
+      margin-bottom: 15px;
+    }
+
+    .coracao {
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+
+    /* Spotify */
+
+    .musica {
+      max-width: 850px;
+      margin: 70px auto;
+      padding: 30px 20px;
+      background: #1b1117;
+      border: 1px solid #713047;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .musica h2 {
+      color: #e88ba6;
+      margin-bottom: 20px;
+    }
+
+    .spotify-espaco {
+      background: #26151e;
+      padding: 25px;
+      border-radius: 12px;
+      color: #d2a6b5;
+      border: 1px dashed #8b3d58;
+    }
+
+    .spotify-espaco iframe {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      min-height: 152px;
+    }
+
+    /* Galeria */
+
     .galeria {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .foto {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-    .foto .espaco {
-      width: 100%;
-      height: 220px;
-      background: #fbe4ea;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #c98a9b;
-      font-size: 0.95rem;
-      border-bottom: 1px dashed #ecc3cd;
-    }
-    .foto .legenda {
-      padding: 12px;
-      font-size: 0.95rem;
-      color: #6b4f57;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
     }
 
-    /* Foto grande (destaque) */
-    .destaque {
+    .foto {
+      background: #21141b;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #512638;
       text-align: center;
-      margin: 40px auto;
-      max-width: 800px;
+      transition: transform 0.3s;
     }
-    .destaque .espaco {
+
+    .foto:hover {
+      transform: translateY(-5px);
+    }
+
+    .foto .espaco {
       width: 100%;
-      height: 400px;
-      background: #fbe4ea;
-      border-radius: 12px;
+      height: 230px;
+      background: #301923;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #c98a9b;
-      border: 1px dashed #ecc3cd;
+      color: #d18ba1;
+    }
+
+    .foto .legenda {
+      padding: 15px;
+      color: #e6bdca;
     }
 
     /* Linha do tempo */
+
     .timeline {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 18px;
     }
+
     .evento {
-      background: #fff;
-      padding: 18px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      border-left: 4px solid #c94f6d;
+      background: #21141b;
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 4px solid #b94e70;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.2);
     }
-    .evento .data {
+
+    .data {
       font-weight: bold;
-      color: #c94f6d;
+      color: #e88ba6;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      background: #ffd6e0;
-      color: #8a5a66;
-      margin-top: 40px;
+      padding: 35px;
+      background: #210d17;
+      color: #d2a6b5;
+      border-top: 1px solid #572033;
+      margin-top: 70px;
+    }
+
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .mensagem {
+        padding: 30px 20px;
+      }
+
+      .destaque .espaco {
+        height: 280px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>Nossa História ❤️</h1>
-    <p>Bem-vindos ao nosso cantinho — cada foto conta um pedacinho de nós.</p>
+    <p>Dois corações, uma história e infinitos momentos.</p>
   </header>
 
-  <!-- Foto de destaque -->
+  <!-- FOTO PRINCIPAL -->
+
   <div class="destaque">
     <div class="espaco">
-      📷 Coloque aqui a foto principal do casal
+      📷 Coloque aqui nossa foto favorita
     </div>
   </div>
 
-  <!-- Galeria de momentos -->
-  <section>
-    <h2>Nossos Momentos</h2>
-    <div class="galeria">
-      <div class="foto">
-        <div class="espaco">📷 Foto 1</div>
-        <div class="legenda">Nosso primeiro encontro</div>
-      </div>
-      <div class="foto">
-        <div class="espaco">📷 Foto 2</div>
-        <div class="legenda">Nossa primeira viagem</div>
-      </div>
-      <div class="foto">
-        <div class="espaco">📷 Foto 3</div>
-        <div class="legenda">Um dia especial</div>
-      </div>
-      <div class="foto">
-        <div class="espaco">📷 Foto 4</div>
-        <div class="legenda">Nosso aniversário</div>
-      </div>
+  <!-- MENSAGEM ROMÂNTICA -->
+
+  <div class="mensagem">
+    <h2>Um pouquinho sobre nós ❤️</h2>
+
+    <p>
+      Se eu pudesse escolher novamente, escolheria você
+      em todas as minhas vidas.
+    </p>
+
+    <p>
+      Obrigado por cada sorriso, cada abraço, cada carinho
+      e por transformar os dias comuns em momentos especiais.
+    </p>
+
+    <p>
+      Talvez eu não consiga colocar em palavras tudo o que
+      sinto, mas quero que você saiba que ter você ao meu
+      lado é uma das coisas mais bonitas que já me aconteceu.
+    </p>
+
+    <p>
+      Que a nossa história continue sendo escrita com amor,
+      cumplicidade, sonhos e muitos momentos felizes.
+    </p>
+
+    <p>
+      Eu te escolheria mil vezes, em mil vidas diferentes.
+      ❤️
+    </p>
+
+    <div class="coracao">♡</div>
+  </div>
+
+  <!-- NOSSA MÚSICA -->
+
+  <section class="musica">
+    <h2>🎵 A nossa música</h2>
+
+    <div class="spotify-espaco">
+
+      <!-- COLE AQUI O LINK DE INCORPORAÇÃO DO SPOTIFY -->
+
+      <p>🎧 Nossa trilha sonora especial</p>
+      <p>
+        Coloque aqui aquela música que faz você
+        lembrar de nós dois.
+      </p>
+
+      <!-- Exemplo:
+      <iframe
+        src="https://open.spotify.com/embed/track/ID_DA_MUSICA"
+        height="152"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      -->
+
     </div>
   </section>
 
-  <!-- Linha do tempo -->
+  <!-- GALERIA -->
+
   <section>
-    <h2>Nossa Linha do Tempo</h2>
+    <h2>Nossos Momentos 📸</h2>
+
+    <div class="galeria">
+
+      <div class="foto">
+        <div class="espaco">📷 Foto 1</div>
+        <div class="legenda">Nosso primeiro encontro ❤️</div>
+      </div>
+
+      <div class="foto">
+        <div class="espaco">📷 Foto 2</div>
+        <div class="legenda">Nossa primeira viagem 🌙</div>
+      </div>
+
+      <div class="foto">
+        <div class="espaco">📷 Foto 3</div>
+        <div class="legenda">Um dia inesquecível 💕</div>
+      </div>
+
+      <div class="foto">
+        <div class="espaco">📷 Foto 4</div>
+        <div class="legenda">Mais um capítulo nosso ❤️</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LINHA DO TEMPO -->
+
+  <section>
+    <h2>Nossa Linha do Tempo 💌</h2>
+
     <div class="timeline">
+
       <div class="evento">
-        <span class="data">📅 2020</span> — O dia em que nos conhecemos.
+        <span class="data">📅 2020</span>
+        <p>O dia em que nossos caminhos se cruzaram.</p>
       </div>
+
       <div class="evento">
-        <span class="data">📅 2021</span> — Começamos a namorar.
+        <span class="data">📅 2021</span>
+        <p>O começo de uma história linda.</p>
       </div>
+
       <div class="evento">
-        <span class="data">📅 2023</span> — Nossa primeira casa juntos.
+        <span class="data">📅 2023</span>
+        <p>Construindo sonhos e vivendo momentos juntos.</p>
       </div>
+
       <div class="evento">
-        <span class="data">📅 2026</span> — E a história continua...
+        <span class="data">📅 2026</span>
+        <p>E nossa história continua sendo escrita...</p>
       </div>
+
     </div>
   </section>
 
   <footer>
-    <p>Feito com ❤️ para nós dois</p>
+    <p>Feito com todo amor do mundo, para nós dois. ❤️</p>
+    <p>Você, hoje e sempre.</p>
   </footer>
 
 </body>
