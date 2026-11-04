@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa História ❤️</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #fff5f7;
+      color: #4a3b3b;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, #ffd6e0, #ffe8ef);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #c94f6d;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #8a5a66;
+    }
+
+    /* Seções */
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section h2 {
+      text-align: center;
+      color: #c94f6d;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    /* Galeria de fotos */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .foto {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .foto .espaco {
+      width: 100%;
+      height: 220px;
+      background: #fbe4ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c98a9b;
+      font-size: 0.95rem;
+      border-bottom: 1px dashed #ecc3cd;
+    }
+    .foto .legenda {
+      padding: 12px;
+      font-size: 0.95rem;
+      color: #6b4f57;
+    }
+
+    /* Foto grande (destaque) */
+    .destaque {
+      text-align: center;
+      margin: 40px auto;
+      max-width: 800px;
+    }
+    .destaque .espaco {
+      width: 100%;
+      height: 400px;
+      background: #fbe4ea;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c98a9b;
+      border: 1px dashed #ecc3cd;
+    }
+
+    /* Linha do tempo */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .evento {
+      background: #fff;
+      padding: 18px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid #c94f6d;
+    }
+    .evento .data {
+      font-weight: bold;
+      color: #c94f6d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #ffd6e0;
+      color: #8a5a66;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nossa História ❤️</h1>
+    <p>Bem-vindos ao nosso cantinho — cada foto conta um pedacinho de nós.</p>
+  </header>
+
+  <!-- Foto de destaque -->
+  <div class="destaque">
+    <div class="espaco">
+      📷 Coloque aqui a foto principal do casal
+    </div>
+  </div>
+
+  <!-- Galeria de momentos -->
+  <section>
+    <h2>Nossos Momentos</h2>
+    <div class="galeria">
+      <div class="foto">
+        <div class="espaco">📷 Foto 1</div>
+        <div class="legenda">Nosso primeiro encontro</div>
+      </div>
+      <div class="foto">
+        <div class="espaco">📷 Foto 2</div>
+        <div class="legenda">Nossa primeira viagem</div>
+      </div>
+      <div class="foto">
+        <div class="espaco">📷 Foto 3</div>
+        <div class="legenda">Um dia especial</div>
+      </div>
+      <div class="foto">
+        <div class="espaco">📷 Foto 4</div>
+        <div class="legenda">Nosso aniversário</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Linha do tempo -->
+  <section>
+    <h2>Nossa Linha do Tempo</h2>
+    <div class="timeline">
+      <div class="evento">
+        <span class="data">📅 2020</span> — O dia em que nos conhecemos.
+      </div>
+      <div class="evento">
+        <span class="data">📅 2021</span> — Começamos a namorar.
+      </div>
+      <div class="evento">
+        <span class="data">📅 2023</span> — Nossa primeira casa juntos.
+      </div>
+      <div class="evento">
+        <span class="data">📅 2026</span> — E a história continua...
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Feito com ❤️ para nós dois</p>
+  </footer>
+
+</body>
+</html>
